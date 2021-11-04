@@ -1,9 +1,19 @@
-money = float(input("Please enter the amount of money you have: "))
-apple = float(
+def get_money():
+    money_input = float(
+        input("Please enter the amount of money you have: "))
+    return money_input
+
+def get_apple():
+    apple_input = float(
         input("Please enter the price of an apple that you would like to buy: "))
+    return apple_input
 
-max_apple = str(int(money//apple))
-change = str(money % apple)
+def final_output(moneyF, appleF):
+    max_apple = int(moneyF//appleF)
+    change = moneyF % appleF
 
-print("You can buy " + max_apple +
-              " apples and your change is " + change + " pesos.")
+    print(f"You can buy {max_apple} apples and your change is {change:.2f} pesos.")
+
+money = get_money()
+apple = get_apple()
+final_output(money, apple)
