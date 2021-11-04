@@ -14,6 +14,17 @@ name = get_name()
 age = get_age()
 address = get_address()
 
-print("\nHi, my name is " + name + ". I am " + age +
-                " years old and I live in " + address + ".")
+def age_validation():
+    try:
+        age_int = int(age)
 
+        if(age_int <= 0):
+            print("\nInvalid age.")
+        else:
+            print("\nHi, my name is " + name + ". I am " + age +
+                            " years old and I live in " + address + ".")
+    
+    except ValueError:
+        print("\nError. Only whole numbers are accepted for age.")
+
+age_validation()
