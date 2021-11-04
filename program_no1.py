@@ -27,4 +27,7 @@ def age_validation():
     except ValueError:
         print("\nError. Only whole numbers are accepted for age.")
 
-age_validation()
+if(name == "" or age == "" or address == ""):
+    print("\nEmpty input is invalid.")
+else:
+    age_validation()
