@@ -1,10 +1,19 @@
 apple_price = 20
 orange_price = 25
 
-apples = int(input("Please enter the number of apples you want to buy: "))
-oranges = int(input("Please enter the number of oranges you want to buy: "))
+def get_apples():
+    apple_input = int(input("Please enter the number of apples you want to buy: "))
+    return apple_input
 
-total_amount = str((apples*apple_price) +
-                           (oranges*orange_price))
+def get_oranges():    
+    orange_input = int(input("Please enter the number of oranges you want to buy: "))
+    return orange_input
 
-print("The total amount is " + total_amount + ".")
+def finalOutput(applesF, orangesF):
+    amount = ((applesF*apple_price) +
+                  (orangesF*orange_price))
+    print("The total amount is Php" + str(amount) + ".00.")
+
+apples = int(get_apples())
+oranges = int(get_oranges())
+finalOutput(apples, oranges)
